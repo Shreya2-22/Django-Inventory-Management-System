@@ -9,4 +9,6 @@ urlpatterns = [
     path('logout/',CustomLogoutView.as_view(template_name='inventory/logout.html'), name='logout'),
     path('dashboard/', Dashboard.as_view(), name='dashboard'),
     path('add-item/', AddItem.as_view(), name='add-item'),
+    path('edit-item/<int:pk>', EditItem.as_view(), name='edit-item'),
+    path('delete-item/<int:pk>', DeleteItem.as_view(), name='delete-item'),
 ]
